@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngApp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>'Elächi</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="icon" href="img/favicon.png" type="image/x-icon"
+	sizes="32x32">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css"
+	href="fonts/font-awesome/css/font-awesome.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css"
+	href="css/nivo-lightbox/nivo-lightbox.css">
+<link rel="stylesheet" type="text/css"
+	href="css/nivo-lightbox/default.css">
+<link
+	href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700"
+	rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"
+	ng-controller="bookTableController">
+	<!-- Navigation
+    ==========================================-->
+	<nav id="menu"
+		class="navbar navbar-default navbar-fixed-top navbar-default-book">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand page-scroll" href="/elachi">'Elächi</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#about" class="page-scroll">About</a></li>
+					<li><a href="#restaurant-menu" class="page-scroll">Menu</a></li>
+					<li><a href="#portfolio" class="page-scroll">Gallery</a></li>
+					<li><a href="#team" class="page-scroll">Chefs</a></li>
+					<li><a href="#call-reservation" class="page-scroll">Contact</a></li>
+					<li><button type="submit" class="btn btn-custom-sm btn-sm">Pre-Book
+							Table</button></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+	</nav>
+	<div class="row top160"></div>
+	<!-- Booking tab Section -->
+	<div id="outer-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<form role="form" action="" method="post" class="f1">
+						<h3>Make Booking</h3>
+						<p>We are happy to serve you.</p>
+						<div class="f1-steps">
+							<div class="f1-progress">
+								<div class="f1-progress-line" data-now-value="12.5"
+									data-number-of-steps="4" style="width: 12.5%;"></div>
+							</div>
+							<div class="f1-step active">
+								<div class="f1-step-icon">
+									<i class="fa fa-user proicon"></i>
+								</div>
+								<p>Account</p>
+							</div>
+							<div class="f1-step">
+								<div class="f1-step-icon">
+									<i class="fa fa-globe proicon"></i>
+								</div>
+								<p>Table</p>
+							</div>
+							<div class="f1-step">
+								<div class="f1-step-icon">
+									<i class="fa fa-cutlery proicon"></i>
+								</div>
+								<p>Menu</p>
+							</div>
+							<div class="f1-step">
+								<div class="f1-step-icon">
+									<i class="fa fa-credit-card proicon"></i>
+								</div>
+								<p>Pay</p>
+							</div>
+						</div>
+						<!-- Account Panel -->
+						<fieldset>
+								<div class="tabs-wrapper"> 
+								    <ul class="nav classic-tabs" role="tablist">
+								        <li class="nav-item">
+								            <a class="nav-link waves-light active" data-toggle="tab" href="#panel61" role="tab"><i class="fa fa-sign-in fa-2x" aria-hidden="true"></i>
+								            <br>Login</a>
+								        </li>
+								        <li class="nav-item">
+								            <a class="nav-link waves-light" data-toggle="tab" href="#panel62" role="tab"><i class="fa fa-user-plus fa-2x" aria-hidden="true"></i>
+								            <br> Create New Account</a>
+								        </li>
+								    </ul>
+								</div>
+								<!-- Tab panels -->
+								<div class="tab-content card">
+								    <!--Panel 1-->
+								    <div class="tab-pane fade in active" id="panel61" role="tabpanel">
+										<div class="form-group">
+											<label class="sr-only" for="f1-login">Login</label> <input
+												type="text" name="f1-login" placeholder="Login..."
+												class="f1-login form-control" id="f1-login" ng-model="login"> 
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="f1-password">Password</label> <input
+												type="text" name="f1-password" placeholder="Password..."
+												class="f1-password form-control" id="f1-password" ng-model="password">
+										</div>
+										<div class="f1-buttons">
+											<button type="button" class="btn btn-next" ng-click="loginUser(login, password)">Login</button>
+										</div>
+								    </div>
+								    <!--/.Panel 1-->
+								    <!--Panel 2-->
+								    <div class="tab-pane fade" id="panel62" role="tabpanel">
+										<div class="form-group">
+											<label class="sr-only" for="f1-crt-email">Email</label> <input
+												type="text" name="f1-crt-email" placeholder="Email..."
+												class="f1-crt-email form-control" id="f1-crt-email">
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="f1-crt-password">Password</label> <input
+												type="password" name="f1-crt-password" placeholder="Password..."
+												class="f1-crt-password form-control" id="f1-crt-password">
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="f1-crt-cpassword">Confirm Password</label> <input
+												type="password" name="f1-crt-cpassword" placeholder="Confirm Password..."
+												class="f1-crt-cpassword form-control" id="f1-crt-cpassword">
+										</div>
+										<div class="f1-buttons">
+											<button type="button" class="btn btn-next">Create Account</button>
+										</div>
+								    </div>
+								    <!--/.Panel 2-->
+								</div>
+						</fieldset>
+						<!-- Account Panel -->
+						<fieldset>
+							<div class="form-group">
+								<label class="sr-only" for="f1-email">City</label> <input
+									type="text" name="f1-city" placeholder="City..."
+									class="f1-city form-control" id="f1-city">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="f1-restaurants">Pick Restaurants</label> <input
+									type="text" name="f1-restaurants" placeholder="Password..."
+									class="f1-restaurants form-control" id="f1-restaurants">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="f1-restaurants-table">Table
+									password</label> <input type="text" name="f1-restaurants-table"
+									placeholder="Pick Restaurant Table"
+									class="f1-restaurants-table form-control" id="f1-restaurants-table">
+							</div>
+							<div class="f1-buttons">
+								<button type="button" class="btn btn-next">Next</button>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="form-group">
+								<label class="sr-only" for="f1-question">Menu</label> <textarea
+									name="f1-menulist" 
+									class="f1-menulist form-control" id="f1-menulist"></textarea>
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="f1-question">Chosen Menu</label> <textarea
+									name="f1-chosen-menulist" 
+									class="f1-chosen-menulist form-control" id="f1-chosen-menulist"></textarea>
+							</div>
+							<div class="f1-buttons">
+								<button type="button" class="btn btn-previous">Previous</button>
+								<button type="button" class="btn btn-next">Next</button>
+							</div>
+						</fieldset>
+
+						<fieldset>
+							<div class="form-group">
+								<label class="sr-only" for="f1-facebook">Card Number</label> <input
+									type="text" name="f1-card" placeholder="Card Number..."
+									class="f1-card form-control" id="f1-card">
+							</div>
+							<div class="f1-buttons">
+								<button type="button" class="btn btn-previous">Previous</button>
+								<button type="submit" class="btn btn-submit">Confirm</button>
+							</div>
+						</fieldset>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ./ outer-container -->
+	<div class="row top160"></div>
+	<!-- Call Reservation Section -->
+	<div id="call-reservation" class="text-center">
+		<div class="container">
+			<h2>
+				Want to make a reservation over call? Call <strong>+91 123
+					456 7890</strong>
+			</h2>
+		</div>
+	</div>
+	<!-- Contact Section -->
+	<div id="footer">
+		<div class="container text-center">
+			<div class="col-md-4">
+				<h3>Address</h3>
+				<div class="contact-item">
+					<p>4321 Wellingtion Avenue,</p>
+					<p>Bangalore, IN 12345</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<h3>Online Support Hours</h3>
+				<div class="contact-item">
+					<p>Mon-Fri: 10:00 AM - 05:00 PM</p>
+					<p>Sat-Sun: Closed</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<h3>Contact Info</h3>
+				<div class="contact-item">
+					<p>Phone: +91 123 456 7890</p>
+					<p>Email: info@elachi.com</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid text-center copyrights">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="social">
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/SmoothScroll.js"></script>
+	<script type="text/javascript" src="js/nivo-lightbox.js"></script>
+	<script type="text/javascript" src="js/jquery.isotope.js"></script>
+	<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+	<script type="text/javascript" src="js/form.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/angular-ng-app.js"></script>
+</body>
+</html>

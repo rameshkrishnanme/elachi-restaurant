@@ -1,0 +1,3 @@
+com\mindtreee\spring\boot\microservices\elachi\SpringBootRestaurantsWeb.class
+com\mindtreee\spring\boot\microservices\elachi\web\WebConfig.class
+com\mindtreee\spring\boot\microservices\elachi\web\WebPageController.class

@@ -1,0 +1,9 @@
+com\mindtreee\spring\boot\microservices\elachi\respository\RestaurantsRepository.class
+com\mindtreee\spring\boot\microservices\elachi\domain\Restaurant.class
+com\mindtreee\spring\boot\microservices\elachi\domain\RestaurantsMenu.class
+com\mindtreee\spring\boot\microservices\elachi\SpringBootRestaurantsAPI.class
+com\mindtreee\spring\boot\microservices\elachi\domain\RestaurantsTable.class
+com\mindtreee\spring\boot\microservices\elachi\respository\CityRepository.class
+com\mindtreee\spring\boot\microservices\elachi\respository\RestaurantsMenuRepository.class
+com\mindtreee\spring\boot\microservices\elachi\domain\City.class
+com\mindtreee\spring\boot\microservices\elachi\respository\RestaurantsTableRepository.class
